@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paris Short Stay</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>body { font-family: 'Inter', sans-serif; }</style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <!-- Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      <span class="font-semibold text-gray-900 text-lg">Paris Short Stay</span>
+      <a href="mailto:puflorent@gmail.com"
+         class="text-sm text-gray-500 hover:text-gray-900 transition-colors hidden sm:block">puflorent@gmail.com</a>
+      <a href="#contact"
+         class="text-sm text-white font-medium px-4 py-2 rounded-lg transition-opacity hover:opacity-90"
+         style="background:#FF385C">Contact</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <div class="relative mt-16 overflow-hidden" style="height:500px">
+    <img src="https://picsum.photos/1600/900?random=1" alt="Paris Short Stay" class="w-full h-full object-cover">
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"></div>
+    <div class="absolute inset-0 flex flex-col items-center justify-center text-white text-center px-4">
+      <h1 class="text-4xl sm:text-5xl font-bold drop-shadow-lg mb-2">Appartement Champs-Élysées</h1>
+      <p class="text-2xl font-semibold mt-2 drop-shadow" style="color:#FF385C">€180<span class="text-lg font-normal text-white/80">/night</span></p>
+      <p class="text-white/75 mt-2 text-base">Avenue des Champs-Élysées, Paris 75008, France</p>
+    </div>
+  </div>
+
+  <!-- Photo Gallery Carousel -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-10">
+    <h2 class="text-xl font-semibold text-gray-900 mb-4">Photo Gallery</h2>
+    <div class="flex gap-2 overflow-x-auto pb-2 mb-4" style="scrollbar-width:none;-ms-overflow-style:none"><button onclick="showTab(0)" id="tab-0" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:{_ACCENT};color:#fff;border-color:{_ACCENT}">Living Room</button>
+<button onclick="showTab(1)" id="tab-1" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Bedroom</button>
+<button onclick="showTab(2)" id="tab-2" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Kitchen</button>
+<button onclick="showTab(3)" id="tab-3" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Bathroom</button>
+<button onclick="showTab(4)" id="tab-4" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Bath</button>
+<button onclick="showTab(5)" id="tab-5" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Balcony</button>
+<button onclick="showTab(6)" id="tab-6" class="carousel-tab px-4 py-2 text-sm font-medium rounded-full whitespace-nowrap transition-colors border" style="background:#fff;color:#6b7280;border-color:#e5e7eb">Street View</button></div><div id="panel-0" class="carousel-panel" style="display:block"><img src="https://picsum.photos/800/600?random=2" alt="Living Room" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Living Room</p></div>
+<div id="panel-1" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=3" alt="Bedroom" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Bedroom</p></div>
+<div id="panel-2" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=4" alt="Kitchen" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Kitchen</p></div>
+<div id="panel-3" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=5" alt="Bathroom" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Bathroom</p></div>
+<div id="panel-4" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=6" alt="Bath" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Bath</p></div>
+<div id="panel-5" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=7" alt="Balcony" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Balcony</p></div>
+<div id="panel-6" class="carousel-panel" style="display:none"><img src="https://picsum.photos/800/600?random=8" alt="Street View" loading="lazy" class="w-full object-cover rounded-xl" style="height:400px;object-fit:cover"><p class="text-center text-sm text-gray-500 mt-3 font-medium">Street View</p></div>
+    <script>
+      var _accent = '#FF385C';
+      var _total = 7;
+      function showTab(idx) {
+        for (var i = 0; i < _total; i++) {
+          var panel = document.getElementById('panel-' + i);
+          var tab   = document.getElementById('tab-'   + i);
+          if (i === idx) {
+            panel.style.display = 'block';
+            tab.style.background    = _accent;
+            tab.style.color         = '#fff';
+            tab.style.borderColor   = _accent;
+          } else {
+            panel.style.display = 'none';
+            tab.style.background    = '#fff';
+            tab.style.color         = '#6b7280';
+            tab.style.borderColor   = '#e5e7eb';
+          }
+        }
+      }
+    </script>
+    
+  </section>
+
+  <!-- Main Content: two-column -->
+  <section class="max-w-5xl mx-auto px-4 sm:px-6 py-8 border-t border-gray-100">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-10">
+
+      <!-- Left: description, amenities, location -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="text-2xl font-bold text-gray-900">Appartement Champs-Élysées</h2>
+          <p class="text-gray-500 text-sm mt-1">2 bedrooms · Up to 4 guests</p>
+        </div>
+        <hr class="border-gray-100">
+        <div><h3 class="text-lg font-semibold text-gray-900 mb-3">About this space</h3><p class="text-gray-600 leading-relaxed">Magnifique appartement de 2 chambres idéalement situé sur la célèbre avenue des Champs-Élysées. À deux pas de l'Arc de Triomphe, des boutiques de luxe et des meilleurs restaurants parisiens. Un cadre élégant et central pour un séjour inoubliable à Paris.</p></div>
+        <div><h3 class="text-lg font-semibold text-gray-900 mb-3">Amenities</h3><div class="flex flex-wrap gap-2"><span class="inline-flex items-center bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">WiFi</span><span class="inline-flex items-center bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Cuisine équipée</span><span class="inline-flex items-center bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Climatisation</span><span class="inline-flex items-center bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Balcon</span><span class="inline-flex items-center bg-gray-100 text-gray-700 text-sm font-medium px-3 py-1 rounded-full">Vue sur avenue</span></div></div>
+        <div><h3 class="text-lg font-semibold text-gray-900 mb-2">Location</h3><p class="text-gray-600">Avenue des Champs-Élysées, Paris 75008, France</p></div>
+      </div>
+
+      <!-- Right: booking card -->
+      <div class="lg:col-span-1">
+        <div class="border border-gray-200 rounded-2xl shadow-lg p-6 sticky top-20">
+          <div class="text-2xl font-bold text-gray-900 mb-1"><span style="color:#FF385C">€180</span><span class="text-base font-normal text-gray-500">/night</span></div>
+          <p class="text-gray-500 text-sm mb-5">2 bedrooms · Up to 4 guests</p>
+          <a href="#contact"
+             class="block w-full text-center text-white font-semibold py-3 px-6 rounded-xl
+                    transition-opacity hover:opacity-90 mb-3"
+             style="background:#FF385C">
+            Book Now
+          </a>
+          <p class="text-center text-gray-400 text-xs">No charge until you confirm</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  
+
+  <!-- Contact -->
+  <section id="contact" class="bg-gray-50 py-16 mt-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl font-bold text-gray-900 mb-2">Get in Touch</h2>
+      <p class="text-gray-500 mb-8">Ready to book? Reach out and we'll get back to you quickly.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="mailto:puflorent@gmail.com"
+           class="inline-flex items-center gap-2 text-white font-medium px-6 py-3 rounded-xl
+                  transition-opacity hover:opacity-90"
+           style="background:#FF385C">
+          &#9993; puflorent@gmail.com
+        </a>
+        <a href="tel:+33 6 42 98 45 35" class="inline-flex items-center gap-2 bg-gray-800 hover:bg-gray-700 text-white font-medium px-6 py-3 rounded-xl transition-colors">&#128222; +33 6 42 98 45 35</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-400 py-8">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 flex flex-col sm:flex-row
+                items-center justify-between gap-3 text-sm">
+      <span class="text-gray-200 font-medium">Paris Short Stay</span>
+      <span>Generated by <a href="https://mcp.clawshow.ai" class="hover:text-gray-200 transition-colors">ClawShow</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
